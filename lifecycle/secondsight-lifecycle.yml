@@ -1,0 +1,47 @@
+generated: '2026-08-26'
+method: searched
+source: https://status.secondsight.ai/
+status_page:
+  present: true
+  url: https://status.secondsight.ai/
+  provider: Better Stack
+  title: Risk Workbench status
+  components:
+    - name: Risk Workbench
+      state_observed: Operational
+    - name: Risk Workbench Backend PROD
+      state_observed: Operational
+      uptime_displayed: 100% uptime
+  incident_history: >-
+    Daily per-component history is published; every day rendered on 2026-08-26 back to
+    2026-05-29 showed "Operational". A "Previous incidents" section and a "Maintenance"
+    tab are present.
+  x-evidence:
+    fetched: '2026-08-26'
+    url: https://status.secondsight.ai/
+    http_status: 200
+versioning:
+  policy_published: false
+  scheme: null
+  note: >-
+    No API versioning policy is published. SecondSight publishes no API reference, so
+    there is no versioned contract to describe.
+deprecation:
+  policy_published: false
+  sunset_header_support: unknown
+  note: >-
+    No deprecation or sunset policy found. No Deprecation pointer is emitted, because
+    none is published.
+sla:
+  published: false
+  note: >-
+    The /security/ page states availability is "backed by the service level agreement
+    (SLA) of our cloud provider" but publishes no SecondSight SLA of its own — no
+    uptime target, credit schedule, or SLA document is served.
+  source: https://www.secondsight.ai/security/
+changelog:
+  published: false
+  note: >-
+    No dated product changelog or release-notes surface was found on the site, the
+    status page, or the sitemap. The /insights/ blog is editorial, not a changelog.
+deprecated_operations: []

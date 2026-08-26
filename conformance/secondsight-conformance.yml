@@ -1,0 +1,74 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.secondsight.ai/security/
+note: >-
+  SecondSight publishes no machine-readable contract, so nothing here is derived from a
+  spec. Every entry below is either a claim the company publishes in prose on its own
+  site, or a recorded negative. Reward-only: entries with conforms:false are absences,
+  not penalties.
+standards:
+  - id: soc2
+    conforms: true
+    evidence: >-
+      /security/ states "we proudly adhere to SOC 2 standards for the security,
+      availability, processing integrity, confidentiality, and privacy of a system" and
+      "We undergo annual SOC 2 audits conducted by a third-party auditor, and the report
+      is available to customers upon request."
+    source: https://www.secondsight.ai/security/
+    certificate_published: false
+    note: Report is available to customers on request; no certificate or attestation is served publicly.
+  - id: gdpr
+    conforms: true
+    evidence: GDPR named in the published privacy policy.
+    source: https://www.secondsight.ai/privacy-policy/
+  - id: ccpa
+    conforms: true
+    evidence: CCPA named in the published privacy policy.
+    source: https://www.secondsight.ai/privacy-policy/
+  - id: tls
+    conforms: true
+    evidence: >-
+      /security/ states all browser-to-server traffic is encrypted with industry-standard
+      Transport Layer Security; confirmed by live TLS probe (see
+      security/secondsight-domain-security.yml).
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth surface published; /.well-known/oauth-authorization-server 404s on every host.
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration 404s on every host.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      No published contract. The one observable error body from api.secondsight.ai is
+      {"error":"requested path is invalid"} with content-type application/json, which is
+      a bespoke envelope, not application/problem+json.
+  - id: iso27001
+    conforms: false
+    evidence: Not claimed anywhere on the site.
+  - id: pci-dss
+    conforms: false
+    evidence: Not claimed anywhere on the site.
+  - id: hipaa
+    conforms: false
+    evidence: Not claimed anywhere on the site.
+  - id: fedramp
+    conforms: false
+    evidence: Not claimed anywhere on the site.
+domain_standards:
+  note: >-
+    SecondSight sells into commercial insurance, whose domain standard is ACORD (forms
+    and the ACORD data/messaging standards). The site carries a page at
+    https://www.secondsight.ai/acord/, but that URL now renders an "Exposure Management
+    for Digital Risk" landing page whose body never mentions ACORD — the slug is a
+    repurposed permalink, not an ACORD conformance claim. The Enterprise pricing tier
+    lists "Custom Form Integration" and "AMS & CRM Integration" without naming a
+    standard. No ACORD conformance is asserted here, because no contract or document
+    declares one.
+  candidates_probed:
+    - id: acord
+      conforms: false
+      evidence: >-
+        https://www.secondsight.ai/acord/ returned HTTP 200; body contains zero
+        occurrences of "ACORD" outside the URL itself.
+      source: https://www.secondsight.ai/acord/

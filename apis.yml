@@ -1,17 +1,50 @@
 aid: secondsight
 name: SecondSight
-description: 'SecondSight is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  SecondSight is a Bloomington, Indiana software company building a "vertical AI"
+  operating system for cyber insurance and digital risk. Its Digital Risk Management
+  Platform packages three SaaS surfaces — Company Workbench (digital asset inventory,
+  privacy and vulnerability scanning, insurability preparation), Broker Workbench
+  (client management, auto-complete applications, quote/bind automation, book value and
+  portfolio analytics) and Underwriter Workbench (risk prediction, portfolio balancing,
+  mitigation) — alongside Exposurescape, a digital-telematics engine for exposure
+  detection and catastrophic-event forecasting. The company was founded in 2019, came
+  out of stealth in 2022 with a seed round led by Tim Crown, and sells to brokers,
+  carriers, MGUs and reinsurers. SecondSight publishes pricing, a SOC 2 security
+  commitments page and a Better Stack status page for its Risk Workbench service, but
+  as of this pass it operates no public developer program — no developer portal, API
+  reference, SDK, or machine-readable contract of any kind is published.
+image: https://www.secondsight.ai/wp-content/uploads/2023/01/second-sight-logo.svg
 url: https://raw.githubusercontent.com/api-evangelist/secondsight/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment
+x-identity:
+  resolved-to: https://www.secondsight.ai/
+  basis: >-
+    The harvest seed was the Forge Global secondary-market listing page
+    https://forgeglobal.com/secondsight_stock/, which returns HTTP 403 to every
+    non-browser client we tried, so the listing itself could not be read. The company
+    was resolved by name to SecondSight (secondsight.ai), the venture-backed private
+    cyber-insurance AI company founded in 2019 in Bloomington, Indiana — the only
+    private company trading under this one-word name. Second Sight Medical Products
+    (retinal implants, now Vivani Medical) is a distinct, formerly public company and
+    is NOT this profile.
+  venue-listing: https://forgeglobal.com/secondsight_stock/
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Insurance
+- Cyber Insurance
+- Insurtech
+- Risk Management
+- Cybersecurity
+- Underwriting
+- Artificial Intelligence
+- Analytics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +52,70 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/secondsight-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/secondsight_stock/
+  url: https://www.secondsight.ai/
+- type: Pricing
+  url: https://www.secondsight.ai/pricing-new/
+- type: Login
+  url: https://www.secondsight.ai/login/
+- type: SignUp
+  url: https://www.secondsight.ai/request-demo/
+- type: TermsOfService
+  url: https://www.secondsight.ai/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.secondsight.ai/privacy-policy/
+- type: Support
+  url: https://www.secondsight.ai/contact-us/
+- type: Blog
+  url: https://www.secondsight.ai/insights/
+- type: BlogRSS
+  url: https://www.secondsight.ai/feed/
+- type: StatusPage
+  url: https://status.secondsight.ai/
+- type: Security
+  url: https://www.secondsight.ai/security/
+- type: Compliance
+  url: https://www.secondsight.ai/security/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/second-sight-for-cyberinsurance
+- type: LLMsTxt
+  url: llms/secondsight-llms.txt
+- type: Plans
+  url: plans/secondsight-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/secondsight-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/secondsight-lifecycle.yml
+- type: Conformance
+  url: conformance/secondsight-conformance.yml
+- type: TrustCenter
+  url: security/secondsight-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/secondsight-vulnerability-disclosure.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    SecondSight ships its cyber-insurance AI only as three logged-in SaaS workbenches;
+    the 40-page sitemap on www.secondsight.ai contains no developer, API, docs or
+    integration page, /developers/ /docs/ /integrations/ all 404, and the one live API
+    host api.secondsight.ai answers every unauthenticated path — including
+    /openapi.json, /swagger.json, /graphql and /mcp — with the same JSON 404 body
+    {"error":"requested path is invalid"}.
+  evidence:
+    - url: https://api.secondsight.ai/openapi.json
+      status: 404
+    - url: https://www.secondsight.ai/developers/
+      status: 404
+    - url: https://www.secondsight.ai/.well-known/agent-card.json
+      status: 404
+    - url: https://forgeglobal.com/secondsight_stock/
+      status: 403
+  checked: '2026-08-26'

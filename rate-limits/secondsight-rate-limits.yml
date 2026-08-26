@@ -1,0 +1,24 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.secondsight.ai/
+limit_count: 0
+note: >-
+  SecondSight publishes no rate limits. There is no developer portal, API reference or
+  docs host on which limits could be documented — the full page inventory from
+  https://www.secondsight.ai/sitemap.xml (40 pages) contains no developer or API page.
+  The one live API host, https://api.secondsight.ai, returns a JSON 404
+  ({"error":"requested path is invalid"}) for every unauthenticated path probed and
+  emitted no RateLimit-*, X-RateLimit-* or Retry-After header on those responses, so
+  nothing could be observed at runtime either.
+limits: []
+response_headers:
+  observed: []
+  note: No rate-limit headers observed on any unauthenticated response.
+exhaustion_status_code: null
+x-evidence:
+  - url: https://www.secondsight.ai/sitemap.xml
+    http_status: 200
+    fetched: '2026-08-26'
+  - url: https://api.secondsight.ai/
+    http_status: 404
+    fetched: '2026-08-26'

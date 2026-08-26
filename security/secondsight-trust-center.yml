@@ -1,0 +1,50 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.secondsight.ai/security/
+note: >-
+  SecondSight has no dedicated trust center (trust.secondsight.ai does not resolve as a
+  distinct property and no Vanta/Drata/SafeBase portal was found). What it does publish
+  is a single "Security" page carrying a SOC 2 commitment, an enumerated set of security
+  measures, and a named security contact. That page is recorded here and is what the
+  Compliance and Security pointers in apis.yml resolve to.
+trust_center:
+  present: false
+  url: null
+security_page:
+  url: https://www.secondsight.ai/security/
+  http_status: 200
+  title: Security
+certifications:
+  - name: SOC 2
+    status: claimed
+    scope: security, availability, processing integrity, confidentiality, privacy
+    audit_cadence: annual, third-party auditor
+    report_availability: available to customers upon request
+    evidence: >-
+      "we proudly adhere to SOC 2 standards" / "We undergo annual SOC 2 audits conducted
+      by a third-party auditor, and the report is available to customers upon request."
+    certificate_public: false
+controls_published:
+  - Data encryption in transit via TLS
+  - Firewalls and intrusion detection/prevention
+  - Internal and third-party audits
+  - Physical security inherited from a major cloud provider
+  - Regular data backups
+  - Patch management
+  - Access controls limiting data to authorized personnel
+  - Third-party vendors required to be SOC 2 compliant
+contacts:
+  - purpose: security policy and SOC 2 questions
+    email: security@secondsight.ai
+    source: https://www.secondsight.ai/security/
+  - purpose: privacy
+    email: privacy@secondsight.ai
+    source: https://www.secondsight.ai/privacy-policy/
+privacy_regimes:
+  - GDPR
+  - CCPA
+x-evidence:
+  fetched: '2026-08-26'
+  url: https://www.secondsight.ai/security/
+  http_status: 200
+  content_type: text/html

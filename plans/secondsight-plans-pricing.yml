@@ -1,0 +1,92 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.secondsight.ai/pricing-new/
+note: >-
+  SecondSight publishes list pricing for two of its three workbenches. These are SaaS
+  seat prices for the product, not API plans — SecondSight publishes no API pricing
+  because it publishes no public API. Currency is not stated on the page; USD is
+  inferred from the "$" symbol and the company's US-only footprint and is marked as
+  such below.
+currency_stated: false
+currency: USD
+plan_count: 5
+products:
+  - name: Broker Workbench
+    plans:
+      - name: Individual
+        price: 0
+        billing_period: annual
+        price_display: $0 Annually
+        audience: individual brokers
+        features:
+          - Client Management
+          - Form Auto-Complete Applications
+          - Price Your Book
+          - Broker Co-Pilot
+          - Speak to Broker Advisor
+      - name: Teams
+        price: 29
+        billing_period: monthly
+        unit: per broker
+        price_display: $29 Monthly Per Broker
+        audience: small teams within brokerages
+        features:
+          - Everything in the Individual package
+          - Team Management and Delegation
+          - Centralized Purchasing
+          - Auto-Quote & Bind
+          - Speak to Broker Advisor
+      - name: Teams+
+        price: 49
+        billing_period: monthly
+        unit: per broker
+        price_display: $49 Monthly Per Broker
+        audience: larger broker teams
+        features:
+          - Everything in the Teams package
+          - Portfolio Book Value for Cyber Insurance
+          - White-labeled Broker & Customer Onboarding
+          - White-labeled Reports & Analytics
+          - Speak to Broker Advisor
+      - name: Enterprise
+        price: null
+        billing_period: null
+        price_display: Talk To Sales
+        audience: large enterprises
+        features:
+          - Everything in the Teams+ package
+          - Portfolio Risk Segmentation and Selection Analytics
+          - Custom Form Integration
+          - Recommender System
+          - Dedicated Account Management & Support
+          - Preferred Partner Recommender System Integration
+          - AMS & CRM Integration
+  - name: Company Workbench
+    plans:
+      - name: Cyber Insurability
+        price: 0
+        billing_period: annual
+        price_display: $0 Annually
+        audience: companies preparing to obtain cyber insurance
+        features:
+          - Digital Asset Inventory
+          - Digital Asset Enrichment
+          - Digital Asset Verification
+          - Privacy & Vulnerability Scan
+          - Broker Collaboration
+          - Policy Review and Binding
+          - Cyber Insurance Application
+          - Risk Remediation Recommendations
+  - name: Underwriter Workbench
+    plans: []
+    note: No list pricing published for the Underwriter Workbench.
+api_pricing:
+  published: false
+  note: >-
+    No metered, per-call, quota or overage pricing is published anywhere on the site.
+    The only integration-adjacent entitlements are the Enterprise tier's "Custom Form
+    Integration" and "AMS & CRM Integration", both sold through a sales conversation.
+x-evidence:
+  fetched: '2026-08-26'
+  url: https://www.secondsight.ai/pricing-new/
+  http_status: 200

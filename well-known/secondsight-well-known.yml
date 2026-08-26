@@ -1,0 +1,92 @@
+generated: '2026-08-26'
+method: probed
+source: live probe of every SecondSight host found in apis.yml
+note: >-
+  No /.well-known/ document is served on any SecondSight host. www.secondsight.ai
+  (WordPress) returns a real 404 for every path probed, including a control path that
+  cannot exist. api.secondsight.ai returns a clean JSON 404 body
+  ({"error":"requested path is invalid"}) for every path. app.secondsight.ai is a
+  single-page application whose server answers HTTP 200 with the same 2,709-byte HTML
+  shell for EVERY path including the control probe, so none of its 200s is a document —
+  it is a catch-all, recorded here as such. No WellKnown and no SecurityTxt pointer is
+  emitted, because nothing was actually served.
+hit_count: 0
+hosts:
+  - host: https://www.secondsight.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+    soft_404_control:
+      path: /.well-known/this-path-should-not-exist-xyz
+      status: 404
+      bytes: 548
+  - host: https://api.secondsight.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+    soft_404_control:
+      path: /.well-known/this-path-should-not-exist-xyz
+      status: 404
+      bytes: 37
+  - host: https://app.secondsight.ai
+    catch_all: true
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: SPA catch-all shell (2709 bytes of HTML), not a document
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a document
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a document
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a document
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a document
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a document
+    soft_404_control:
+      path: /.well-known/this-path-should-not-exist-xyz
+      status: 200
+      bytes: 2709
+      note: >-
+        Identical byte count to every other 200 on this host — proof the host is a
+        catch-all and no /.well-known/ document exists.
