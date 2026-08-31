@@ -1,0 +1,21 @@
+{
+  "repo": "secondsight",
+  "feeds": [
+    {
+      "source": "https://www.secondsight.ai/contact-us/",
+      "feed_url": "https://www.secondsight.ai/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.secondsight.ai/insights/",
+      "feed_url": "https://www.secondsight.ai/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
