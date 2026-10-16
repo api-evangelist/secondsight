@@ -2,41 +2,22 @@
   "repo": "secondsight",
   "feeds": [
     {
-      "source": "https://www.secondsight.ai/contact-us/",
-      "feed_url": "https://www.secondsight.ai/contact-us/blog/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "discovered"
-    },
-    {
       "source": "https://www.secondsight.ai/insights/",
-      "feed_url": "https://www.secondsight.ai/insights/blog/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "discovered"
-    },
-    {
-      "source": "https://www.secondsight.ai/contact-us/blog/feed/",
-      "feed_url": "https://www.secondsight.ai/contact-us/blog/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed"
-    },
-    {
-      "source": "https://www.secondsight.ai/insights/blog/feed/",
-      "feed_url": "https://www.secondsight.ai/insights/blog/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed"
+      "error": "HTTPError"
     },
     {
       "source": "https://www.secondsight.ai/feed/",
-      "feed_url": "https://www.secondsight.ai/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed"
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.secondsight.ai/contact-us/blog/feed/",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.secondsight.ai/insights/blog/feed/",
+      "error": "HTTPError"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
